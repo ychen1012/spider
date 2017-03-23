@@ -67,10 +67,19 @@ public class Xiazai {
 					}
 		}
 	}
+	public String getFileName(String url){
+		//url =url.substring(7);
+		String fileName =url.replaceAll("[\\?:*|<>\"/]", "_")+".html";
+		return fileName;
+		
+		
+	}
 	public static void main(String[] args){
 		Xiazai s=new Xiazai();
-		s.xiazaiPage("www.baidu.com", "d://3.txt");
-		
+		String url= "http://www.bistu.edu.cn/";
+		//String filePath ="d://baidu.html";
+		String filePath ="d://websites/"+ s.getFileName(url);
+		s.xiazaiPage(url, filePath);
 	}
 
 }

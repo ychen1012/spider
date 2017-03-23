@@ -23,6 +23,9 @@ public class Fenxi {
 				String linkhref =link.attr("href");
 			urls.add(linkhref);
 			System.out.println(linkhref);
+			Xiazai x=new Xiazai();
+			String filePath1 ="d://websites/"+x.getFileName(linkhref)+".html";
+			x.xiazaiPage(linkhref, filePath1);
 			
 		}
 		
@@ -33,11 +36,11 @@ public class Fenxi {
 		}
 		return urls;
 	}
-	public static void main(String[] args){
-		Fenxi fx=new Fenxi();
-		fx.fenxi("d://baidu.html");
+	//public static void main(String[] args){
+		//Fenxi fx=new Fenxi();
+		//fx.fenxi("");
 			
-		}
+		//}
 	}
 
 

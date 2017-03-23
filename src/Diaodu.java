@@ -3,14 +3,14 @@ import java.util.Hashtable;
 import java.util.LinkedList;
 
 public class Diaodu {
-	private ArrayList<String> zhongziUrls=new ArrayList();
-	private LinkedList<String> daixaizaiUrls=new LinkedList();
-	private Hashtable yixiazaiUrls =new Hashtable();
+	private ArrayList<String> zhongziUrls=new ArrayList();//种子库
+	private LinkedList<String> daixaizaiUrls=new LinkedList();//待下载队列
+	private Hashtable yixiazaiUrls =new Hashtable();//不重复的已下载
 	private Xiazai xiazai =new Xiazai();
 	private Fenxi fenxi =new Fenxi();
 	public void initZhongziUrls(){
 	//zhongziUrls.add("http://www.bistu.edu.cn");
-	zhongziUrls.add("http://www.sohu.com");
+	zhongziUrls.add("http://www.163.com");
 	 
 	}
 	public void zhongzidaixiazai(){
@@ -26,7 +26,7 @@ public class Diaodu {
 			//String newUrl= new Fenxi().fenxi(filePath)
 		//download;
 		//String filepath ="d://baidu.html";
-		String filepath ="d://"+new Xiazai().getFileName(newUrl)+".html";
+		String filepath ="d://websites/"+new Xiazai().getFileName(newUrl)+".html";
 		//System.out.println(newUrl);
 		xiazai.xiazaiPage(newUrl, filepath);
 		//gengxin yixiazai;
@@ -45,7 +45,7 @@ public class Diaodu {
 		//gengxin daixaizai0
 		daixaizaiUrls.removeFirst();			
 		// Xiazai x=new Xiazai();
-		 //x.xiazaiPage(new Fenxi().fenxi(filePath)., filePath);
+		// x.xiazaiPage(new Fenxi().fenxi(filePath), filePath);
 		
 		
 		
